@@ -2215,6 +2215,19 @@ html {
     transition: filter 0.5s cubic-bezier(.4,2,.6,1);
 }
 
+@media (max-width: 768px) {
+    .fullscreen-image {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .fullscreen-image img {
+        object-fit: contain;
+        object-position: center;
+        background: var(--light-gray);
+    }
+}
+
 .fullscreen-image::after {
     content: "";
     position: absolute;
@@ -2225,18 +2238,6 @@ html {
     mix-blend-mode: multiply;
 }
 
-@media (max-width: 768px) {
-    .fullscreen-image {
-        height: 100vh;
-        min-height: 100vh;
-        max-height: none;
-    }
-    .fullscreen-image img {
-        height: 100vh;
-        min-height: 100vh;
-        max-height: none;
-    }
-}
 
 /* Отключение hover-анимации только для логотипа в шапке */
 .header .logo:hover {
